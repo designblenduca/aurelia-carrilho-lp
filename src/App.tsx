@@ -1,38 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import type { Variants } from 'framer-motion';
 import {
-  Building2,
   Map,
   ShieldCheck,
   Target,
-  Briefcase,
-  FileSignature,
-  TrendingUp,
-  Users,
   ArrowRight,
   CheckCircle2,
   XCircle,
-  Crown,
-  ChevronDown
+  Crown
 } from 'lucide-react';
 import './index.css';
 import heroImg from './assets/hero-aurelia.png';
 import heroMobileImg from './assets/hero-aurelia-mobile.jpg';
 
-const fadeIn = {
+const fadeIn: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
 };
 
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2
-    }
-  }
-};
+
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
