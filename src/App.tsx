@@ -69,7 +69,7 @@ function App() {
     <div className="app-container">
       {/* Navigation */}
       <nav style={navStyle}>
-        <img src="/logo-aurelia.svg" alt="Aurélia Carrilho" style={{ height: '35px', filter: 'drop-shadow(0px 2px 4px rgba(0,0,0,0.5))' }} />
+        <img src={`${import.meta.env.BASE_URL}logo-aurelia.svg`} alt="Aurélia Carrilho" style={{ height: '35px', filter: 'drop-shadow(0px 2px 4px rgba(0,0,0,0.5))' }} />
         <a href="#aplicacao" className={scrolled ? "btn-glass" : "btn-gold"} style={{ padding: scrolled ? '10px 24px' : '12px 28px', fontSize: '0.9rem', transition: 'all 0.3s ease' }}>
           Aplicar para Mentoria
         </a>
@@ -407,7 +407,7 @@ function App() {
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
               <div style={{ position: 'relative', borderRadius: '24px', overflow: 'hidden', border: '1px solid var(--glass-border)', aspectRatio: '4/5' }}>
                 <div style={{ position: 'absolute', inset: 0, background: 'var(--gold-gradient)', opacity: 0.1, zIndex: 1 }}></div>
-                <img src="/aurelia-perfil.jpeg" alt="Aurélia Carrilho" style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+                <img src={`${import.meta.env.BASE_URL}aurelia-perfil.jpeg`} alt="Aurélia Carrilho" style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
               </div>
             </motion.div>
 
